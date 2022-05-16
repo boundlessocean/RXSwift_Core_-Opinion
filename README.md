@@ -1,7 +1,37 @@
 
 ## RXSwift源码阅读笔记
 
-[toc]
+
+   * [RXSwift源码阅读笔记](#rxswift源码阅读笔记)
+      * [是什么？](#是什么)
+      * [RXSwift核心](#rxswift核心)
+      * [1. Observable](#1-observable)
+         * [1.1 普通序列](#11-普通序列)
+         * [1.2 特征序列](#12-特征序列)
+            * [1.2.1 PrimitiveSequence特征序列](#121-primitivesequence特征序列)
+            * [1.2.2 SharedSequence特征序列](#122-sharedsequence特征序列)
+            * [1.2.3 Control特征序列](#123-control特征序列)
+      * [2. Observer](#2-observer)
+         * [2.1普通观察者](#21普通观察者)
+            * [2.1.1 AnyObserver](#211-anyobserver)
+            * [2.1.2 AnonymousObserver](#212-anonymousobserver)
+            * [2.1.3 subscribe](#213-subscribe)
+         * [2.2 特征观察者](#22-特征观察者)
+      * [3. Observer &amp; Observable](#3-observer--observable)
+         * [3.1 Subject](#31-subject)
+         * [3.2 Relay](#32-relay)
+      * [4. 操作符](#4-操作符)
+      * [5. Disposable](#5-disposable)
+         * [5.1 手动管理](#51-手动管理)
+         * [5.2 加入销毁包](#52-加入销毁包)
+         * [5.3 dispose销毁了什么？](#53-dispose销毁了什么)
+            * [5.3.1 Producer类型的序列销毁](#531-producer类型的序列销毁)
+            * [5.3.2 Subject 类型的序列销毁](#532-subject-类型的序列销毁)
+      * [6. Schedulers](#6-schedulers)
+         * [6.1 subscribeOn](#61-subscribeon)
+         * [6.2 observeOn](#62-observeon)
+         * [6.3 内置的Scheduler](#63-内置的scheduler)
+
 
 
 ### 是什么？
